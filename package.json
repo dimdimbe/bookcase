@@ -1,5 +1,5 @@
 {
-  "name": "bookcase",
+  "name": "bookcase-js",
   "version": "1.0.0",
   "description": "Bookcase is an extensible storage engine",
   "main": "index.js",
