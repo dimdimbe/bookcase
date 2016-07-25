@@ -111,7 +111,9 @@ function _useHooks(method,data){
 
 function _constructHooks(){
   _hooks = _hooks.map((hook)=>{
-    hook.static = hook.fn['construct'](hook.static)
+    let fn = function(s){return s}
+    if(hook.fn['construct'] && typeof hook.fn['construct'] === 'function'){ fn = hook.fn['construct'] }
+    hook.static = fn(hook.static)
     return hook
   })
 }
